@@ -1,12 +1,18 @@
 package jp.techacademy.yamamoto.daisuke.calcapp;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    EditText text1 = findViewById(R.id.editText1);
+    EditText text2 = findViewById(R.id.editText2);
+    Double val1 = Double.parseDouble(text1.getText().toString());
+    Double val2 = Double.parseDouble(text2.getText().toString());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button4.setOnClickListener(this);
 
     }
-
+    
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -43,5 +49,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
-
 }
