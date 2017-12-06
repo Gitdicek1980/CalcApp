@@ -24,13 +24,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button button4 = (Button) findViewById(R.id.button4);
         button4.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra("VALUE1", 0);
-        intent.putExtra("VALUE2", 0);
-        startActivity(intent);
+        switch (v.getId()) {
+            case R.id.button1:
+
+                break;
+            case R.id.button2:
+
+                break;
+            case R.id.button3:
+
+                break;
+            case R.id.button4:
+
+        }
     }
+
 }
