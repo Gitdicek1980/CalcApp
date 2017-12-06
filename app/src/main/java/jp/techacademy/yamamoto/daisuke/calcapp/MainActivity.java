@@ -30,17 +30,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button1:
+        if (v.getId() == R.id.button1) { result = val1 + val2;
+        } else if (v.getId() == R.id.button2) { result = val1 - val2;
+        } else if (v.getId() == R.id.button3) { result = val1 * val2;
+        } else if (v.getId() == R.id.button4) { result = val1 / val2;
+        }
 
-                break;
-            case R.id.button2:
-
-                break;
-            case R.id.button3:
-
-                break;
-            case R.id.button4:
 
                 EditText text1 = findViewById(R.id.editText1);
                 EditText text2 = findViewById(R.id.editText2);
@@ -50,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Intent intent = new Intent(this, SecondActivity.class);
                 startActivity(intent);
-        }
+
 
     }
 }
