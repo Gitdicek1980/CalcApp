@@ -9,6 +9,12 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    Double result = 0.0;
+    EditText text1 = findViewById(R.id.editText1);
+    EditText text2 = findViewById(R.id.editText2);
+    Double val1 = Double.parseDouble(text1.getText().toString());
+    Double val2 = Double.parseDouble(text2.getText().toString());
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v.getId() == R.id.button3) { result = val1 * val2;
         } else if (v.getId() == R.id.button4) { result = val1 / val2;
         }
-
-
-                EditText text1 = findViewById(R.id.editText1);
-                EditText text2 = findViewById(R.id.editText2);
-                Double val1 = Double.parseDouble(text1.getText().toString());
-                Double val2 = Double.parseDouble(text2.getText().toString());
-
-
+        
                 Intent intent = new Intent(this, SecondActivity.class);
                 startActivity(intent);
 
