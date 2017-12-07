@@ -21,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
 
         TextView textView = (TextView) findViewById(R.id.textView);
         double result = getIntent().getDoubleExtra("result", 0.0);
+        textView.setText(Double.toString(result));
 
     }
 }
