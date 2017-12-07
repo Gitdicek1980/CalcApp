@@ -14,11 +14,13 @@ public class SecondActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        int value1 = intent.getIntExtra("text1", 0);
-        int value2 = intent.getIntExtra("text2", 0);
+        intent.getIntExtra("button1", 0);
+        intent.getIntExtra("button2", 0);
+        intent.getIntExtra("button3", 0);
+        intent.getIntExtra("button4", 0);
 
         TextView textView = (TextView) findViewById(R.id.textView);
-        textView.setText(String.valueOf(value1 + value2));
+        double result = getIntent().getDoubleExtra("result", 0.0);
 
     }
 }
